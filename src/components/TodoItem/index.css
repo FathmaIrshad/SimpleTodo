@@ -1,0 +1,22 @@
+/* Write your CSS here */
+li {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 25px;
+  font-family: 'Roboto';
+}
+p {
+  font-size: 20px;
+  color: #000000;
+}
+button {
+  margin-right: 30px;
+  background-color: transparent;
+  border: 3px solid #ff0b37;
+  color: #ff0b37;
+  border-radius: 10px;
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+}

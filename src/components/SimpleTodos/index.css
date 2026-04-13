@@ -1,0 +1,23 @@
+/* Write your CSS here */
+.todo-bg {
+  background-color: #ffc2a0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto';
+}
+.todo-container {
+  height: 90%;
+  width: 90%;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 10px;
+}
+h1 {
+  color: #ff8542;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+}
