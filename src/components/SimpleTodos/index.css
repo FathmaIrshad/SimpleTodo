@@ -1,7 +1,6 @@
 /* Write your CSS here */
 .todo-bg {
   background-color: #ffc2a0;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,3 +20,11 @@ h1 {
   font-size: 40px;
   text-align: center;
 }
+.addContainer {
+  margin-left: 100px;
+  font-family: 'Roboto';
+  
+}
+input{
+   margin-right:20px; 
+  }

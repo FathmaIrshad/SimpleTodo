@@ -20,3 +20,87 @@ button {
   height: 50px;
   font-size: 20px;
 }
+
+input[type='checkbox']:checked + p {
+  text-decoration: line-through;
+}
+.todo-bg {
+  background-color: #ffc2a0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Header Styling */
+h1 {
+  color: #ff8542;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+input[type='text'],
+.edit-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* List Item Styling */
+.todo-item {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.todo-item p {
+  flex-grow: 1;
+  margin: 0 15px;
+  font-size: 18px;
+  color: #1e293b;
+}
+
+/* Functionality: Strike-through */
+.strike-through {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
+/* Checkbox size */
+.checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* Buttons */
+button {
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.edit-save-btn {
+  background-color: transparent;
+  border: 2px solid #ff8542;
+  color: #ff8542;
+  margin-right: 8px;
+}
+
+.delete-btn {
+  background-color: transparent;
+  border: 2px solid #ff0b37;
+  color: #ff0b37;
+}
+
+button:hover {
+  opacity: 0.8;
+}
