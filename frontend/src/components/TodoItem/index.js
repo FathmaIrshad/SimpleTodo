@@ -4,11 +4,11 @@ import {useState} from 'react'
 import './index.css'
 
 const TodoItem = props => {
-  const {todoItem, deleteTodo, editTodo} = props
-  const {id, title} = todoItem
+  const {todoItem, deleteTodo, editTodo, toggleComplete} = props
+  const {id, title, completed} = todoItem
   const [editedText, editText] = useState(title)
   const [currentStatusEdit, changeStatus] = useState(true)
-  const [todochecked, toggleTodocheckbox] = useState(false)
+
   const onDelete = () => {
     deleteTodo(id)
   }
@@ -22,17 +22,19 @@ const TodoItem = props => {
     editTodo(id, editedText)
     changeStatus(!currentStatusEdit)
   }
+  // Apply a CSS class if completed
+  const titleClassName = completed === 1 ? 'completed-task' : ''
 
   return (
     <li className="todo-item">
       <input
         type="checkbox"
         className="checkbox"
-        value={todochecked}
-        onChange={() => toggleTodocheckbox(!todochecked)}
+        checked={completed === 1}
+        onChange={() => toggleComplete(id, completed)}
       />
       {currentStatusEdit ? (
-        <p className={todochecked ? 'strike-through' : ''}>{title}</p>
+        <p className={titleClassName}>{title}</p>
       ) : (
         <input
           type="text"

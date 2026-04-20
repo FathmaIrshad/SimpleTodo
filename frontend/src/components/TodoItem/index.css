@@ -104,3 +104,7 @@ button {
 button:hover {
   opacity: 0.8;
 }
+.completed-task {
+  text-decoration: line-through;
+  color: #888;
+}
