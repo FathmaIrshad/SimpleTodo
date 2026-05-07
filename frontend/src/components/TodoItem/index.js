@@ -5,8 +5,8 @@ import './index.css'
 
 const TodoItem = props => {
   const {todoItem, deleteTodo, editTodo, toggleComplete} = props
-  const {id, title, completed} = todoItem
-  const [editedText, editText] = useState(title)
+  const {id, task, completed} = todoItem
+  const [editedText, editText] = useState(task)
   const [currentStatusEdit, changeStatus] = useState(true)
 
   const onDelete = () => {
@@ -34,7 +34,7 @@ const TodoItem = props => {
         onChange={() => toggleComplete(id, completed)}
       />
       {currentStatusEdit ? (
-        <p className={titleClassName}>{title}</p>
+        <p className={titleClassName}>{task}</p>
       ) : (
         <input
           type="text"

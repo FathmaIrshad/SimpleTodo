@@ -10,3 +10,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* The issue was an Invisible Error Overlay.When your React app hits a critical error (like that process is not defined error you had earlier), a library called webpack-dev-server creates a full-screen, transparent layer (an <iframe>) over your entire website. */
+iframe,
+#webpack-dev-server-client-overlay {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+/* This forces your container to be clickable */
+.todo-bg,
+.todo-container {
+  pointer-events: auto !important;
+  cursor: default !important;
+}
